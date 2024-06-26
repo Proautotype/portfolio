@@ -1,0 +1,60 @@
+@use "base.style";
+
+body {
+  background-color: base.$base-background;
+  color: base.$base-text;
+  padding: 5px;
+}
+
+.App {
+  @include base.center();
+  height: 98vh;
+  position: relative;
+  .app-content{
+    padding: 10px;
+    height: 100%;
+    width: 50vw;
+    .content-area.summary {
+      width: 100%;
+      border-radius: 10px;
+      .details{
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 10px;
+        max-width : 100%;
+        span, typography, p{
+          font-size: 13px;
+          font-weight: lighter;
+        }
+      }
+    }
+  }
+}
+
+header {
+  //padding: 10px;
+  //@include base.row();
+  gap: 5px;
+  //margin: 25px 0;
+  //img{
+  //  width: 120px;
+  //}
+  //.divider{
+  //  background-color: base.$base-text;
+  //  height: 100%;
+  //  width: 1px;
+  //  margin: 0 20px;
+  //}
+}
+
+.actions {
+  @include base.row();
+}
+
+footer{
+  bottom: 0;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.27);
+  width: 100%;
+  z-index: 1000;
+}

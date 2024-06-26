@@ -1,0 +1,17 @@
+$base-background: #161a1d;
+$base-background_1: #660708;
+$base-background_2: #a4161a;
+$base-text: #fff;
+
+@mixin center{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin row{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
