@@ -1,5 +1,13 @@
 @use "base.style";
 
+header {
+  gap: 5px;
+  position: fixed;
+  top: 0;
+  background: base.$base-background;
+  width: 100%;
+}
+
 body {
   background-color: base.$base-background;
   color: base.$base-text;
@@ -8,12 +16,15 @@ body {
 
 .App {
   @include base.center();
-  height: 98vh;
+  min-height: 98vh;
   position: relative;
   .app-content{
-    padding: 10px;
-    height: 100%;
-    width: 50vw;
+    .developer-info{
+      position: fixed;
+      top: 0;
+      background: base.$base-background;
+    }
+
     .content-area.summary {
       width: 100%;
       border-radius: 10px;
@@ -28,23 +39,9 @@ body {
         }
       }
     }
-  }
-}
 
-header {
-  //padding: 10px;
-  //@include base.row();
-  gap: 5px;
-  //margin: 25px 0;
-  //img{
-  //  width: 120px;
-  //}
-  //.divider{
-  //  background-color: base.$base-text;
-  //  height: 100%;
-  //  width: 1px;
-  //  margin: 0 20px;
-  //}
+
+  }
 }
 
 .actions {
@@ -57,4 +54,8 @@ footer{
   background-color: rgba(0, 0, 0, 0.27);
   width: 100%;
   z-index: 1000;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
 }

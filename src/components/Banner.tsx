@@ -48,8 +48,9 @@ export default (props: iBanner) => {
 }
 
 const BannerWrapper = styled.div`
-    background: #00000094;
-    position: relative;
+    background: rgba(0, 0, 0, 0.22);
+    position: fixed;
+    bottom: 0;
     width: 100%;
     height: 50px;
     overflow: hidden;
